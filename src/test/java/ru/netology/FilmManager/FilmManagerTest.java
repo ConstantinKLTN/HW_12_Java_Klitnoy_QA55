@@ -94,4 +94,37 @@ public class FilmManagerTest {
         String[] actual = manager.showMeLastFilms();
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void testShowMeLast20Films() {
+        FilmManager manager = new FilmManager(20);
+
+        manager.add("Пила 1");
+        manager.add("Пила 2");
+        manager.add("Пила 3");
+        manager.add("Пила 4");
+        manager.add("Пила 5");
+        manager.add("Пила 6");
+        manager.add("Пила 7");
+        manager.add("Пила 8");
+        manager.add("Пила 9");
+        manager.add("Пила 10");
+        manager.add("Пила 11");
+        manager.add("Пила 12");
+        manager.add("Пила 13");
+        manager.add("Пила 14");
+        manager.add("Пила 15");
+        manager.add("Пила 16");
+        manager.add("Пила 17");
+        manager.add("Пила 18");
+        manager.add("Пила 19");
+        manager.add("Пила 20");
+
+
+
+
+        String[] expected = {"Пила 20", "Пила 19", "Пила 18", "Пила 17", "Пила 16", "Пила 15", "Пила 14", "Пила 13", "Пила 12", "Пила 11", "Пила 10", "Пила 9", "Пила 8", "Пила 7", "Пила 6", "Пила 5", "Пила 4", "Пила 3", "Пила 2", "Пила 1",};
+        String[] actual = manager.showMeLastFilms();
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }

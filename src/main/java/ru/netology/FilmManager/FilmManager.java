@@ -4,13 +4,13 @@ public class FilmManager {
     private String[] films = new String[0];
     public int  amountMovies;
 
+    public FilmManager(int amountMovies) {
+        this.amountMovies = amountMovies;
+    }
     public FilmManager() {
         this.amountMovies = 10;
     }
 
-    public FilmManager(int amountMovies) {
-        this.amountMovies = amountMovies;
-    }
 
     public void add(String film) {
         String[] tmp = new String[films.length + 1];
