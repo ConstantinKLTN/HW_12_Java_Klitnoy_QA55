@@ -2,6 +2,15 @@ package ru.netology.FilmManager;
 
 public class FilmManager {
     private String[] films = new String[0];
+    public int  amountMovies;
+
+    public FilmManager() {
+        this.amountMovies = 10;
+    }
+
+    public FilmManager(int amountMovies) {
+        this.amountMovies = amountMovies;
+    }
 
     public void add(String film) {
         String[] tmp = new String[films.length + 1];
@@ -18,10 +27,10 @@ public class FilmManager {
 
    public String[] showMeLastFilms() {
         int resultLength;
-        if (films.length < 10) {
+        if (films.length < amountMovies) {
             resultLength = films.length;
         } else {
-            resultLength = 10;
+            resultLength = amountMovies;
         }
         String[] result = new String[resultLength];
        for (int i = 0; i < result.length; i++) {
