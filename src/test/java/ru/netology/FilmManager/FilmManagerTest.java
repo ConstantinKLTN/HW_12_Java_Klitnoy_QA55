@@ -44,10 +44,10 @@ public class FilmManagerTest {
         manager.add("Пила 6");
         manager.add("Пила 7");
 
-        String[] expected = {"Бдадшот", "Вперед", "Отель Белград", "Джентельмены", "Человек-неведимка", "Тролли.Мировой тур", "Номер один", "Пила", "Пила 2" ,"Пила 3", "Пила 4", "Пила 5", "Пила 6", "Пила 7"};
+        String[] expected = {"Бдадшот", "Вперед", "Отель Белград", "Джентельмены", "Человек-неведимка", "Тролли.Мировой тур", "Номер один", "Пила", "Пила 2", "Пила 3", "Пила 4", "Пила 5", "Пила 6", "Пила 7"};
         String[] actual = manager.showMeAllFilms();
         Assertions.assertArrayEquals(expected, actual);
-        }
+    }
 
     @Test
     public void testShowMeLast10Films() {
@@ -64,7 +64,7 @@ public class FilmManagerTest {
         manager.add("Пила 6");
         manager.add("Пила 7");
 
-        String[] expected = {"Пила 7", "Пила 6", "Пила 5", "Пила 4", "Пила 3", "Пила 2", "Пила", "Номер один" ,"Тролли.Мировой тур", "Человек-неведимка"};
+        String[] expected = {"Пила 7", "Пила 6", "Пила 5", "Пила 4", "Пила 3", "Пила 2", "Пила", "Номер один", "Тролли.Мировой тур", "Человек-неведимка"};
         String[] actual = manager.showMeLastFilms();
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -119,8 +119,6 @@ public class FilmManagerTest {
         manager.add("Пила 18");
         manager.add("Пила 19");
         manager.add("Пила 20");
-
-
 
 
         String[] expected = {"Пила 20", "Пила 19", "Пила 18", "Пила 17", "Пила 16", "Пила 15", "Пила 14", "Пила 13", "Пила 12", "Пила 11", "Пила 10", "Пила 9", "Пила 8", "Пила 7", "Пила 6", "Пила 5", "Пила 4", "Пила 3", "Пила 2", "Пила 1",};
